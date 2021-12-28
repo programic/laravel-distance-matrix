@@ -6,8 +6,8 @@ use Carbon\Carbon;
 
 class Response
 {
-    private array $data = [];
-    private bool $success = false;
+    private $data = [];
+    private $success = false;
     private $response = null;
 
     public function __construct($response)
@@ -28,7 +28,6 @@ class Response
                     round($start->format('i') / 5) * 5,
                     0
                 );
-
 
                 $start = $startRounded;
                 $end = $start->copy()->addMinutes(30);
