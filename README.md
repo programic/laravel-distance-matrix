@@ -1,33 +1,29 @@
-# Programic - Repositories
+# Programic - Google Distance matrix
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/programic/laravel-repository.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-repository)
-![](https://github.com/programic/laravel-repository/workflows/Run%20Tests/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/programic/laravel-repository.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-repository)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/programic/laravel-distance-matrix.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-distance-matrix)
+![](https://github.com/programic/laravel-distance-matrix/workflows/Run%20Tests/badge.svg?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/programic/laravel-distance-matrix.svg?style=flat-square)](https://packagist.org/packages/programic/laravel-distance-matrix)
 
-This package allows you to use Repositories and keeps the controllers clean
+This package allows you to use get simple the duration and distance between two addresses by the Google Distance Matrix API
 
 ### Installation
 This package requires PHP 7.2 and Laravel 5.8 or higher.
 
 ```
-composer require programic/laravel-repository
+composer require programic/laravel-distance-matrix
 ```
 
 ### Basic Usage
-```bash
-# Create Repository
-php artisan make:repository UserRepository
-```
-
 ```php
-use App\Repositories\UserRepository;
-use Illuminate\Http\Request;
+use \Programic\DistanceMatrix\DistanceMatrix
 
-class UserController {
+class DistanceController {
 
-    public function index(Request $request, UserRepository $userRepository)
+    public function index(DistanceMatrix $distanceMatrix)
     {
-        $userCollection = $userRepository->search($request)->get();
+        $response = $distanceMatrix->from($from)->to($to)->calculate();
+        
+        $distance = $response->toArray();
     }
     
 } 
