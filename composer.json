@@ -1,0 +1,33 @@
+{
+    "name": "programic/laravel-distance-matrix",
+    "license": "proprietary",
+    "type": "package",
+    "description": "Using Google Distance Matrix in Laravel",
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "Programic",
+            "email": "development@programic.com",
+            "homepage": "https://programic.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Programic\\DistanceMatrix\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Programic\\DistanceMatrix\\DistanceMatrixServiceProvider"
+            ]
+        }
+    }
+}
