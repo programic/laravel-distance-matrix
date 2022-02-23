@@ -79,6 +79,7 @@ class DistanceMatrix
         $client = new GuzzleClient();
         $request = $client->getAsync($url, [
             'query' => $params,
+            'verify' => false,
             'headers' => [
                 'Accept' => 'application/hal+json',
                 'Origin' => '*',
