@@ -27,12 +27,7 @@ class DistanceMatrix
     protected $traffic_model = 'best_guess';
     protected $departure_time = 'now';
 
-    /**
-     * Distance Matrix statuses
-     *
-     * View this page for more information:
-     * https://developers.google.com/maps/documentation/distance-matrix/distance-matrix#DistanceMatrixStatus
-     **/
+    // Distance Matrix statuses
     protected const STATUS_OK = 'OK';
     protected const STATUS_INVALID_REQUEST = 'INVALID_REQUEST';
     protected const STATUS_MAX_ELEMENTS_EXCEEDED = 'MAX_ELEMENTS_EXCEEDED';
