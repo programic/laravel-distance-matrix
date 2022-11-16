@@ -29,6 +29,19 @@ class DistanceController {
 } 
 ```
 
+### Available Exceptions
+See the Exceptions folder for more information.
+Except for the InvalidKeyException, these Exceptions are all taken from the [Google Distance Matrix API documentation](https://developers.google.com/maps/documentation/distance-matrix/distance-matrix#DistanceMatrixStatus).
+```php
+use Programic\DistanceMatrix\Exceptions\InvalidKeyException;
+use Programic\DistanceMatrix\Exceptions\InvalidRequestException;
+use Programic\DistanceMatrix\Exceptions\MaxDimensionsExceededException;
+use Programic\DistanceMatrix\Exceptions\MaxElementsExceededException;
+use Programic\DistanceMatrix\Exceptions\OverDailyLimitException;
+use Programic\DistanceMatrix\Exceptions\OverQueryLimitException;
+use Programic\DistanceMatrix\Exceptions\RequestDeniedException;
+use Programic\DistanceMatrix\Exceptions\UnknownErrorException;
+```
 
 ### Testing
 ```bash
