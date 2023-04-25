@@ -3,7 +3,7 @@
 namespace Programic\DistanceMatrix\Exceptions;
 
 use Exception;
-use JetBrains\PhpStorm\Internal\LanguageLevelTypeAware;
+use Throwable;
 
 class RequestDeniedException extends Exception
 {

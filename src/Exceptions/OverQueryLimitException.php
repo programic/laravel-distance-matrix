@@ -3,6 +3,7 @@
 namespace Programic\DistanceMatrix\Exceptions;
 
 use Exception;
+use Throwable;
 
 class OverQueryLimitException extends Exception
 {
